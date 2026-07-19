@@ -3,15 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My LiveKit AI Agent</title>
+    <title>AI Voice Workspace</title>
+    <!-- Loads Tailwind CSS instantly -->
+    <script src="https://jsdelivr.net"></script>
 </head>
-<body>
-    <h1>AI Agent Workspace</h1>
+<body class="bg-slate-950 text-slate-100 min-h-screen flex flex-col items-center justify-center p-6 antialiased font-sans">
 
+    <!-- Glowing Background Effect -->
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(59,130,246,0.08),transparent_50%)] pointer-events-none"></div>
+
+    <!-- Main Dashboard Card -->
+    <main class="relative z-10 w-full max-w-md bg-slate-900/60 backdrop-blur-xl border border-slate-800/80 p-8 rounded-2xl shadow-2xl text-center">
+        
+        <!-- Status Indicator -->
+        <div class="inline-flex items-center gap-2 px-3 py-1 bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-medium rounded-full mb-6">
+            <span class="w-1.5 h-1.5 bg-emerald-400 rounded-full animate-pulse"></span>
+            Agent Online
+        </div>
+
+        <!-- Heading -->
+        <h1 class="text-3xl font-bold tracking-tight bg-gradient-to-r from-white via-slate-200 to-slate-400 bg-clip-text text-transparent mb-3">
+            AI Assistant
+        </h1>
+        
+        <!-- Subtext -->
+        <p class="text-sm text-slate-400 leading-relaxed mb-8">
+            Welcome to your intelligent voice workspace. Click the widget in the bottom right corner to start your live session.
+        </p>
+
+        <!-- Divider Line -->
+        <div class="h-px bg-gradient-to-r from-transparent via-slate-800 to-transparent my-6"></div>
+
+        <!-- Extra Status Info -->
+        <div class="grid grid-cols-2 gap-4 text-left text-xs text-slate-500">
+            <div>Provider: <span class="text-slate-400 font-medium">LiveKit Cloud</span></div>
+            <div>Secure Connection: <span class="text-slate-400 font-medium">SSL Active</span></div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="mt-8 text-xs text-slate-600 relative z-10">
+        Powered by LiveKit Agent Web Widget
+    </footer>
+
+    <!-- PASTE YOUR EXACT LIVEKIT SCRIPT SNIPPET DIRECTLY BELOW THIS LINE -->
 <script
   src="https://cloud.livekit.io/embed-popup.js"
   data-lk-agent="CA_whiriYhMMPCb"
   data-lk-color="#3459fe"
 ></script>
+
 </body>
 </html>
